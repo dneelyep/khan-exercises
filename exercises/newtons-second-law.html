@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-require="math math-format spin">
+<html data-require="math math-format spin word-problems">
   <head>
     <title>Newton's Second Law</title>
     <script src="../khan-exercise.js"></script>
@@ -16,19 +16,17 @@
       <div class="problems">
         <div id="solve-for-force">
 	  <div class="spin">
-	    <p class="problem">{Suppose|Assume} the mass of an object is <code><var>mass</var>kg</code> and its acceleration is <code><var>acceleration</var>m/s^2</code>.</p>
+	    <!-- TODO: Consider adding vehicles a la <var>vehicle(rand(5) + 1)</var> to spice up problem. -->
+	    <p class="problem">{Suppose|Assume} the mass of an object is <code><var>mass</var>kg</code> and its acceleration is <code><var>acceleration</var>\dfrac{m}{s^2}</code>.</p>
 	  </div>
-	  <!-- TODO: Consider having the setup section describe a car of a specific model that 
-	       weighs a certain amount, travelling with a certain acceleration. -->
-	  <!-- TODO: Each problem is a parametrized template. Treat as such. -->
+	  <!-- TODO: Remove/reduce duplication in problem descriptions/etc. -->
           <p class="question">What is the magnitude of the force acting on the object?</p>
           <p class="solution" data-type="decimal"><var>force</var></p>
         </div>
 
         <div id="solve-for-mass">
-	  <!-- TODO: Add problem sections if needed. -->
 	  <div class="spin">
-	    <p class="problem">{Suppose|Assume} the force acting on an object is <code><var>force</var>N</code> and its acceleration is <code><var>acceleration</var>m/s^2</code>.</p>
+	    <p class="problem">{Suppose|Assume} the force {acting|} on an object is <code><var>force</var>N</code> and its acceleration is <code><var>acceleration</var>\dfrac{m}{s^2}</code>.</p>
 	  </div>
           <p class="question">What is the mass of the object?</p>
           <p class="solution" data-type="decimal"><var>mass</var></p>
@@ -36,7 +34,7 @@
 
         <div id="solve-for-acceleration">
 	  <div class="spin">
-	    <p class="problem">{Suppose|Assume} the force acting on an object is <code><var>force</var>N</code> and its mass is <code><var>mass</var>kg</code></p>
+	    <p class="problem">{Suppose|Assume} the force {acting|} on an object is <code><var>force</var>N</code> and its mass is <code><var>mass</var>kg</code></p>
 	  </div>
           <p class="question">What is the acceleration of the object?</p>
           <p class="solution" data-type="decimal"><var>acceleration</var></p>
@@ -44,11 +42,11 @@
       </div>
 
       <div class="hints">
+	<!-- TODO: A relevant video for this exercise is newton-s-second-law-of-motion -->
 	<p>Remember to convert to standard units.</p>
-	<p>Remember that the units of Newtons are <code>fraction((kg*m), s^2)</code>.</p><!--TODO: Make that a fraction. And the below part a fraction.-->
-	<p><code>F = ma</code>. Here, <code>m=<var>mass</var>kg</code>, and  <code>a=<var>acceleration</var>fraction(m, s^2)</code></p>
-	<p>F = <var>force</var>N, m=<var>mass</var>kg, a=<var>acceleration</var>m/s^2</p>
-	<!-- TODO: Get this working	<p><a class="related-video" href="/video/associative-law-of-multiplication" data-youtube-id="5RzDVNob0-0">Associative Law of Multiplication</a></p> -->
+	<p>Remember that the units of Newtons are <code>\dfrac{kg{\times}m}{s^2}</code>.</p>
+	<p><code>F = ma</code>. Here, <code>m=<var>mass</var>kg</code>, and  <code>a=<var>acceleration</var>\dfrac{m}{s^2}</code></p>
+	<p><code>F = <var>force</var>N, m=<var>mass</var>kg, a=<var>acceleration</var>\dfrac{m}{s^2}</code></p>
       </div>
     </div>
   </body>
